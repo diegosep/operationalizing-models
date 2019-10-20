@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_2" version="4.2">
+    <Header description="linear SVM">
+        <Application name="Apache Spark MLlib" version="2.4.0"/>
+        <Timestamp>2019-01-20T16:13:44</Timestamp>
+    </Header>
+    <DataDictionary numberOfFields="9">
+        <DataField name="field_0" optype="continuous" dataType="double"/>
+        <DataField name="field_1" optype="continuous" dataType="double"/>
+        <DataField name="field_2" optype="continuous" dataType="double"/>
+        <DataField name="field_3" optype="continuous" dataType="double"/>
+        <DataField name="field_4" optype="continuous" dataType="double"/>
+        <DataField name="field_5" optype="continuous" dataType="double"/>
+        <DataField name="field_6" optype="continuous" dataType="double"/>
+        <DataField name="field_7" optype="continuous" dataType="double"/>
+        <DataField name="target" optype="categorical" dataType="string"/>
+    </DataDictionary>
+    <RegressionModel modelName="linear SVM" functionName="classification" normalizationMethod="none">
+        <MiningSchema>
+            <MiningField name="field_0" usageType="active"/>
+            <MiningField name="field_1" usageType="active"/>
+            <MiningField name="field_2" usageType="active"/>
+            <MiningField name="field_3" usageType="active"/>
+            <MiningField name="field_4" usageType="active"/>
+            <MiningField name="field_5" usageType="active"/>
+            <MiningField name="field_6" usageType="active"/>
+            <MiningField name="field_7" usageType="active"/>
+            <MiningField name="target" usageType="target"/>
+        </MiningSchema>
+        <RegressionTable intercept="0.0" targetCategory="1">
+            <NumericPredictor name="field_0" coefficient="-0.2022425697576848"/>
+            <NumericPredictor name="field_1" coefficient="0.1546771289321572"/>
+            <NumericPredictor name="field_2" coefficient="-0.28975527355496705"/>
+            <NumericPredictor name="field_3" coefficient="0.14894155652020288"/>
+            <NumericPredictor name="field_4" coefficient="-0.10511672714378406"/>
+            <NumericPredictor name="field_5" coefficient="-0.23917749107389988"/>
+            <NumericPredictor name="field_6" coefficient="0.0"/>
+            <NumericPredictor name="field_7" coefficient="0.06295916280305308"/>
+        </RegressionTable>
+        <RegressionTable intercept="0.0" targetCategory="0"/>
+    </RegressionModel>
+</PMML>
